@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 /*-----------------------------------------CORE.CSS-----------------------------------------*/
 /*CORE.css v1.0*/
@@ -7,7 +14,8 @@
 /*Nastavení box-sizing: border-box, takže šířka elementu, = content + padding + border a nastavení 
 základní výšky řádku pro všechny prohlížeče*/
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 1.5;
 }
 
@@ -15,7 +23,8 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /*Odstranění marginu elementu body*/
@@ -55,7 +64,8 @@ h1 {
 /*Oprava dekorace textu zkratky u některých prohlížečů*/
 abbr[title] {
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*------------------KONEC------------------CORE.CSS------------------KONEC------------------*/
@@ -64,15 +74,23 @@ abbr[title] {
 }
 
 .plan tbody {
+  -webkit-transition: opacity 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
+  transition: opacity 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
+  -o-transition: transform 500ms ease 500ms, opacity 500ms ease 500ms;
   transition: transform 500ms ease 500ms, opacity 500ms ease 500ms;
+  transition: transform 500ms ease 500ms, opacity 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
 }
 
 .plan tbody.hidden {
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
   opacity: 0;
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -83,9 +101,15 @@ abbr[title] {
 .seat {
   padding: .1rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .seat .circle {
@@ -113,6 +137,8 @@ abbr[title] {
 }
 
 .circle {
+  -webkit-transition: fill 200ms ease;
+  -o-transition: fill 200ms ease;
   transition: fill 200ms ease;
 }
 
@@ -121,6 +147,8 @@ abbr[title] {
 }
 
 .seat-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 1rem;
 }
@@ -139,9 +167,16 @@ abbr[title] {
 }
 
 .selects-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 1rem;
 }
 
@@ -155,17 +190,24 @@ abbr[title] {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  -webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  -o-transition: transform 500ms ease, opacity 500ms ease;
   transition: transform 500ms ease, opacity 500ms ease;
+  transition: transform 500ms ease, opacity 500ms ease, -webkit-transform 500ms ease;
 }
 
 .select.hidden {
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
   opacity: 0;
 }
 
 .select:focus {
   outline: none;
-  box-shadow: 0 0 0 1px #BEBBBB;
+  -webkit-box-shadow: 0 0 0 1px #BEBBBB;
+          box-shadow: 0 0 0 1px #BEBBBB;
 }
 
 .past {
@@ -181,16 +223,29 @@ abbr[title] {
 }
 
 .main-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-header {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-header h1 {
@@ -198,29 +253,48 @@ abbr[title] {
 }
 
 .booking-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .submit-button {
   background: #2F243A;
   padding: 1rem;
   border: 1px solid #444054;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: opacity 500ms ease 1s, -webkit-transform 500ms ease 1s;
+  transition: opacity 500ms ease 1s, -webkit-transform 500ms ease 1s;
+  -o-transition: transform 500ms ease 1s, opacity 500ms ease 1s;
   transition: transform 500ms ease 1s, opacity 500ms ease 1s;
+  transition: transform 500ms ease 1s, opacity 500ms ease 1s, -webkit-transform 500ms ease 1s;
   color: #BEBBBB;
   margin-top: 1rem;
 }
 
 .submit-button.hidden {
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
   opacity: 0;
 }
 
 .booking-message-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -244,6 +318,8 @@ abbr[title] {
 
 .close-message {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   right: 0;
   padding: 0 1rem;
@@ -272,4 +348,3 @@ body {
   font-family: 'Rubik', sans-serif;
   margin: 0 .5rem;
 }
-/*# sourceMappingURL=style.css.map */
