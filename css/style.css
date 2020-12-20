@@ -1,0 +1,275 @@
+@charset "UTF-8";
+/*-----------------------------------------CORE.CSS-----------------------------------------*/
+/*CORE.css v1.0*/
+/*Vytvořil Petr Hank*/
+/**/
+/**/
+/*Nastavení box-sizing: border-box, takže šířka elementu, = content + padding + border a nastavení 
+základní výšky řádku pro všechny prohlížeče*/
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+/*Nastaví všem elementům dědičnost vlastnosti box-sizing z elementu html*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Odstranění marginu elementu body*/
+body {
+  margin: 0;
+}
+
+/*Starší prohlížeče špatně zobrazují HTML5 dokumenty, proto resetujeme vlastnost display*/
+article, aside, footer, header, nav, section, main {
+  display: block;
+}
+
+/*Odstranění odrážek u seznamů v elementech nav*/
+nav ol,
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*Sloučení ohraničení buňek v tabulkách*/
+table {
+  border-collapse: collapse;
+}
+
+/*Sjednocení vzhledu ohraničení fieldset pro všechny prohlížeče*/
+fieldset {
+  border: 1px solid #a0a0a0;
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/*Oprava velikosti h1 uvnitř elementů, jako article a section*/
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/*Oprava dekorace textu zkratky u některých prohlížečů*/
+abbr[title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/*------------------KONEC------------------CORE.CSS------------------KONEC------------------*/
+.plan {
+  overflow: hidden;
+}
+
+.plan tbody {
+  transition: transform 500ms ease 500ms, opacity 500ms ease 500ms;
+}
+
+.plan tbody.hidden {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.corridor {
+  height: 2rem;
+}
+
+.seat {
+  padding: .1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat .circle {
+  fill: #FAFF7F;
+}
+
+.seat.selected .circle {
+  fill: #34C8D5;
+}
+
+.seat.booked .circle {
+  fill: #BEBBBB;
+}
+
+.seat.disabled {
+  color: #BEBBBB;
+}
+
+.seat.disabled .circle {
+  fill: #383838;
+}
+
+.seat.booked.disabled .circle {
+  fill: #242424;
+}
+
+.circle {
+  transition: fill 200ms ease;
+}
+
+.seat-number {
+  position: absolute;
+}
+
+.seat-group {
+  display: flex;
+  margin: 0 1rem;
+}
+
+.seat-checkbox {
+  -webkit-appearance: none;
+  outline: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.seat-svg {
+  width: 100%;
+  max-width: 2rem;
+}
+
+.selects-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.select {
+  background-color: #2F243A;
+  padding: 1rem;
+  border: 1px solid #444054;
+  border-radius: 3px;
+  margin: .5rem 0;
+  color: #BEBBBB;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: transform 500ms ease, opacity 500ms ease;
+}
+
+.select.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.select:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #BEBBBB;
+}
+
+.past {
+  color: #5c5c5c;
+}
+
+#date {
+  z-index: 2;
+}
+
+#session {
+  z-index: 1;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.main-header h1 {
+  text-align: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button {
+  background: #2F243A;
+  padding: 1rem;
+  border: 1px solid #444054;
+  align-self: center;
+  transition: transform 500ms ease 1s, opacity 500ms ease 1s;
+  color: #BEBBBB;
+  margin-top: 1rem;
+}
+
+.submit-button.hidden {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.booking-message-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-weight: 300;
+  padding: 1rem 4rem;
+}
+
+.booking-message-wrapper.warning {
+  background: #BEBBBB;
+}
+
+.booking-message-wrapper.success {
+  background: #34C8D5;
+}
+
+.booking-message-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close-message {
+  position: absolute;
+  display: flex;
+  right: 0;
+  padding: 0 1rem;
+}
+
+.close-message-svg {
+  width: 2rem;
+}
+
+@media screen and (max-width: 350px) {
+  main {
+    font-size: .8rem;
+  }
+  .booking-message-wrapper {
+    padding: 1rem 4rem 1rem 1rem;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #2F243A;
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+  margin: 0 .5rem;
+}
+/*# sourceMappingURL=style.css.map */

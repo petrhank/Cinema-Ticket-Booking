@@ -1,0 +1,23 @@
+@import "partials/_core.scss";
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+@import "partials/plan";
+@import "partials/seats";
+@import "partials/select";
+@import "partials/main-content-wrapper";
+@import "partials/main-header";
+@import "partials/booking-form";
+@import "partials/submit-button";
+@import "partials/booking-message";
+
+@import "partials/media-queries";
+html{
+    height: 100%;
+}
+
+body{
+    background-color: $background-color;
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+    margin: 0 .5rem;
+}

@@ -1,0 +1,33 @@
+.booking-message-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-weight: 300;
+    padding: 1rem 4rem;
+    &.warning{
+        background: $text-color;
+    }
+    &.success{
+        background: $selected-seat-color;
+    }
+    &.hidden{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.close-message{
+    position: absolute;
+    display: flex;
+    right: 0;
+    padding: 0 1rem;
+}
+
+.close-message-svg{
+    width: 2rem;
+}
+

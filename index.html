@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<!-- info -->
+    <meta charset="utf-8">
+    <meta name="description" content="popis webu">
+    <meta name="author" content="Petr Hank">
+    <title>new website | Petr Hank</title>
+<!--  -->
+    <meta name="google" content="notranslate"> <!-- Vypíná nabídku překladu v Google Chrome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- style -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body>
+    <header class="main-header">
+        <h1>Cinema Ticket Booking</h1>
+    </header>
+    <main class="main-content-wrapper">
+        <form class="booking-form">
+
+            <div class="selects-wrapper">
+                <select name="date" class="select" id="date">
+                    <option hidden>Vyberte datum</option>
+                </select>
+                <select name="session" class="select hidden" id="session"></select>
+            </div>
+
+    
+            <table class="plan">
+                <tbody class="hidden">
+                    <tr class="row">
+                        <td class="seat-group">
+                            <div class="seat">
+                                <svg viewBox="0 0 100 100" class="seat-svg"><circle cx="50" cy="50" r="50" fill="red" class="circle"/></svg>
+                                <label for="" class="seat-number"></label>
+                                <input type="checkbox" name="seats" class="seat-checkbox">
+                            </div>
+                            <div class="seat">
+                                <svg viewBox="0 0 100 100" class="seat-svg"><circle cx="50" cy="50" r="50" fill="red" class="circle"/></svg>
+                                <label for="" class="seat-number"></label>
+                                <input type="checkbox" name="seats" class="seat-checkbox">
+                            </div>
+                        </td>
+                        <td class="seat-group">
+                            <div class="seat">
+                                <svg viewBox="0 0 100 100" class="seat-svg"><circle cx="50" cy="50" r="50" fill="red" class="circle"/></svg>
+                                <label for="" class="seat-number"></label>
+                                <input type="checkbox" name="seats" class="seat-checkbox">
+                            </div>
+                            <div class="seat">
+                                <svg viewBox="0 0 100 100" class="seat-svg"><circle cx="50" cy="50" r="50" fill="red" class="circle"/></svg>
+                                <label for="" class="seat-number"></label>
+                                <input type="checkbox" name="seats" class="seat-checkbox">
+                            </div>
+                            <div class="seat">
+                                <svg viewBox="0 0 100 100" class="seat-svg"><circle cx="50" cy="50" r="50" fill="red" class="circle"/></svg>
+                                <label for="" class="seat-number"></label>
+                                <input type="checkbox" name="seats" class="seat-checkbox">
+                            </div>
+                        </td>
+                        <td class="seat-group">
+                            <div class="seat">
+                                <svg viewBox="0 0 100 100" class="seat-svg"><circle cx="50" cy="50" r="50" fill="red" class="circle"/></svg>
+                                <label for="" class="seat-number"></label>
+                                <input type="checkbox" name="seats" class="seat-checkbox">
+                            </div>
+                            <div class="seat">
+                                <svg viewBox="0 0 100 100" class="seat-svg"><circle cx="50" cy="50" r="50" fill="red" class="circle"/></svg>
+                                <label for="" class="seat-number"></label>
+                                <input type="checkbox" name="seats" class="seat-checkbox">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="submit-button hidden" type="button">Rezervovat</button>
+        </form>
+        <div class="booking-message-wrapper hidden">
+            <span class="booking-message"></span>
+            <a href="#" class="close-message">
+                <svg viewBox="0 0 32 32" class="close-message-svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross" ><line class="cls-1" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+            </a>
+        </div>
+    </main>
+
+    
+    
+<!--JavaScript-->
+    <script src="js/script.js"></script>
+</body>
+</html>

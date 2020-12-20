@@ -1,0 +1,55 @@
+.seat{
+    padding: .1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle{
+        fill: $available-seat-color;
+    }
+    &.selected .circle{
+        fill: $selected-seat-color;
+    }
+    &.booked{
+        .circle{
+            fill: $booked-seat-color;
+        }
+    }
+    &.disabled{
+        .circle{
+            fill: $disabled-seat-color;
+        }
+        color: $text-color;
+    }
+    &.booked.disabled{
+        .circle{
+            fill:$disabled-booked-seat-color;
+        }
+    }
+}
+
+.circle{
+    transition: fill 200ms ease;
+}
+
+.seat-number{
+    position: absolute;
+}
+
+.seat-group{
+    display: flex;
+    margin: 0 1rem;
+}
+
+.seat-checkbox{
+    -webkit-appearance: none;
+    outline: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.seat-svg{
+    width: 100%;
+    max-width: $seat-width;
+}

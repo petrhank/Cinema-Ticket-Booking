@@ -1,0 +1,60 @@
+/*-----------------------------------------CORE.CSS-----------------------------------------*/
+/*CORE.css v1.0*/
+/*Vytvořil Petr Hank*/
+/**/
+/**/
+/*Nastavení box-sizing: border-box, takže šířka elementu, = content + padding + border a nastavení 
+základní výšky řádku pro všechny prohlížeče*/
+html {
+   box-sizing: border-box;
+   line-height: 1.5;
+}
+
+/*Nastaví všem elementům dědičnost vlastnosti box-sizing z elementu html*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Odstranění marginu elementu body*/
+body {
+   margin: 0;
+}
+
+/*Starší prohlížeče špatně zobrazují HTML5 dokumenty, proto resetujeme vlastnost display*/
+article, aside, footer, header, nav, section, main {
+   display: block;
+}
+
+/*Odstranění odrážek u seznamů v elementech nav*/
+nav ol,
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*Sloučení ohraničení buňek v tabulkách*/
+table {
+   border-collapse: collapse;
+}
+
+/*Sjednocení vzhledu ohraničení fieldset pro všechny prohlížeče*/
+fieldset {
+   border: 1px solid #a0a0a0;
+   padding: 0.35em 0.75em 0.625em;
+}
+
+/*Oprava velikosti h1 uvnitř elementů, jako article a section*/
+h1 {
+   font-size: 2em;
+   margin: 0.67em 0;
+}
+
+/*Oprava dekorace textu zkratky u některých prohlížečů*/
+abbr[title] {
+   text-decoration: underline;
+   text-decoration: underline dotted;
+}
+
+/*------------------KONEC------------------CORE.CSS------------------KONEC------------------*/

@@ -1,0 +1,13 @@
+.submit-button{
+    background: $background-color;
+    padding: 1rem;
+    border: 1px solid $accent-color;
+    align-self: center;
+    transition: transform 500ms ease 1s, opacity 500ms ease 1s;
+    color: $text-color;
+    margin-top: 1rem;
+    &.hidden{
+        transform: scale(.9);
+        opacity: 0;
+    }
+}
