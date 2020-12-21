@@ -105,6 +105,11 @@ function createCinemaHallPlan() {
 
   function identifySeats() {
     //Přidá labelům číslo a checkboxům id
+
+    if (!Element.prototype.matches) {   //Zajistí kompatibilitu metody matches pro ie
+        Element.prototype.matches = Element.prototype.msMatchesSelector;
+    }
+
     var allSeats = document.querySelectorAll('.seat');
     Array.prototype.forEach.call(allSeats, function (seat, i) {
       var number = i + 1;
@@ -123,7 +128,8 @@ function createCinemaHallPlan() {
       checkbox.value = number;
       checkbox.id = 'seat' + number;
       checkbox.addEventListener('change', function () {
-        if (!seat.msMatchesSelector('.booked')|| !seat.matches('.booked')) {
+          
+        if (!seat.matches('.booked')) {
           //Zabrání, aby třídu selected mohly obdržet již vybraná sedadla
           seat.classList.toggle('selected');
         }
