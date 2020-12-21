@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: $seat-width;
     .circle{
         fill: $available-seat-color;
     }
@@ -51,5 +52,4 @@
 
 .seat-svg{
     width: 100%;
-    max-width: $seat-width;
 }
