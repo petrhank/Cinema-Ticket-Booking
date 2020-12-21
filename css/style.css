@@ -156,6 +156,61 @@ abbr[title] {
   max-width: 2rem;
 }
 
+.selects-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.select {
+  background-color: #2F243A;
+  padding: 1rem;
+  border: 1px solid #444054;
+  border-radius: 3px;
+  margin: .5rem 0;
+  color: #BEBBBB;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, opacity 500ms ease;
+  transition: transform 500ms ease, opacity 500ms ease, -webkit-transform 500ms ease;
+}
+
+.select.hidden {
+  pointer-events: none;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+
+.select:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 1px #BEBBBB;
+          box-shadow: 0 0 0 1px #BEBBBB;
+}
+
+.past {
+  color: #5c5c5c;
+}
+
+#date {
+  z-index: 2;
+}
+
+#session {
+  z-index: 1;
+}
+
 .main-content-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,6 +314,72 @@ abbr[title] {
 
 .close-message-svg {
   width: 2rem;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .select.hidden {
+    display: none;
+  }
+  .seat {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 2rem;
+    height: 2rem;
+  }
+  .seat-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .seat-checkbox {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    opacity: 0;
+  }
+  .seat-number {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .booking-message-wrapper {
+    left: 0;
+  }
+  .close-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 0;
+    height: 100%;
+  }
+  .close-message-svg {
+    height: 2rem;
+  }
 }
 
 @media screen and (max-width: 350px) {

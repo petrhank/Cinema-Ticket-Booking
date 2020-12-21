@@ -1,0 +1,57 @@
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    .select.hidden{
+        display: none;
+    };
+    .seat{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+    }
+    .seat-svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .seat-checkbox{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        opacity: 0;
+    }
+
+    .seat-number{
+        position: absolute;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .booking-message-wrapper{
+        left: 0;
+    }
+
+    .close-message{
+        display: flex;
+        align-items: center;
+        top: 0;
+        height: 100%;
+    }
+
+    .close-message-svg{
+        height: 2rem;
+    }
+}

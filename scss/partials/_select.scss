@@ -1,39 +1,40 @@
-// .selects-wrapper{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     margin-bottom: 1rem;
-// }
+.selects-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
 
-// .select{
-//     background-color: $background-color;
-//     padding: 1rem;
-//     border: 1px solid $accent-color;
-//     border-radius: 3px;
-//     margin: .5rem 0;
-//     color: $text-color;
-//     -moz-appearance: none; //odstraní přednastavený vzhled selectu
-//     -webkit-appearance: none;   //odstraní přednastavený vzhled selectu
-//     appearance: none;
-//     transition: transform 500ms ease, opacity 500ms ease;
-//     &.hidden{
-//         transform: translateY(-100%);
-//         opacity: 0;
-//     }
-//     &:focus{
-//         outline: none;
-//         box-shadow: 0 0 0 1px $booked-seat-color;
-//     }
-// }
+.select{
+    background-color: $background-color;
+    padding: 1rem;
+    border: 1px solid $accent-color;
+    border-radius: 3px;
+    margin: .5rem 0;
+    color: $text-color;
+    -moz-appearance: none; //odstraní přednastavený vzhled selectu
+    -webkit-appearance: none;   //odstraní přednastavený vzhled selectu
+    appearance: none;
+    transition: transform 500ms ease, opacity 500ms ease;
+    &.hidden{
+        pointer-events: none;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0 1px $booked-seat-color;
+    }
+}
 
-// .past{
-//     color: $past-text-color;
-// }
+.past{
+    color: $past-text-color;
+}
 
-// #date{
-//     z-index: 2;
-// }
+#date{
+    z-index: 2;
+}
 
-// #session{
-//     z-index: 1;
-// }
+#session{
+    z-index: 1;
+}

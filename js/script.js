@@ -71,7 +71,7 @@ function checkLocalStorage() {
       'date': date
     };
     return session;
-    
+
   }
 
   if (localStorage.getItem('data') === null) {
@@ -123,7 +123,7 @@ function createCinemaHallPlan() {
       checkbox.value = number;
       checkbox.id = 'seat' + number;
       checkbox.addEventListener('change', function () {
-        if (!seat.matches('.booked')) {
+        if (!seat.msMatchesSelector('.booked')|| !seat.matches('.booked')) {
           //Zabrání, aby třídu selected mohly obdržet již vybraná sedadla
           seat.classList.toggle('selected');
         }
@@ -209,7 +209,7 @@ function createForm() {
   }
 
   function showAvailablityOfSeats() {
-    //Zobrazení statusu obsazenosti filmu 
+    //Zobrazení statusu obsazenosti filmu
     var session = storedData[dateSelector.value][sessionSelector.value].bookedSeats;
     Array.prototype.forEach.call(seatCheckboxes, function (seatCheckbox) {
       seatCheckbox.parentElement.classList.remove('selected');
@@ -273,7 +273,7 @@ function createForm() {
 
     function bookSession() {
       var checkedSeats = [];
-      seatCheckboxes.forEach(function (checkbox) {
+      Array.prototype.forEach.call(seatCheckboxes, function (checkbox) {
         //Zkontroluje, které checkboxy jsou zakliknuté a jejich hodnoty uloží do storedData
         if (checkbox.checked) {
           storedData[dateSelector.value][sessionSelector.value].bookedSeats.push(checkbox.value);
