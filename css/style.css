@@ -134,11 +134,12 @@ abbr[title] {
 
 .seat-checkbox {
   cursor: pointer;
-  -webkit-appearance: none;
   outline: none;
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .seat-svg {
