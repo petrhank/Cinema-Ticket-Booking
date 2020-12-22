@@ -1,4 +1,4 @@
-const movies = ['Avengers', 'Iron Man', 'Harry Potter', 'Princezna ze mlejna', 'Pelíšky', 'Popelka'];
+const movies = ['Interstellar', 'Znamení', 'Bláznivý příběh Robina Hooda', 'Princezna ze mlejna', 'Pelíšky', 'Harry Potter a Ohnivý Pohár', 'Horizont Události', 'sKORO NA mizině - full movie', 'Pravidla Moštárny', 'Válka Světů'];
 const dateSelector = document.querySelector('#date');
 const sessionSelector = document.querySelector('#session');
 
