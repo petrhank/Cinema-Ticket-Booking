@@ -173,8 +173,8 @@ function createForm() {
   function dateSelected() {
     //Pokud je zavolána (např. event listenerem), proveduje následující:
     appendSessionOptions();
-    disablePastSessions(storedData[dateSelector.value][sessionSelector.value].date);
     showAvailablityOfSeats();
+    disablePastSessions(storedData[dateSelector.value][sessionSelector.value].date);
 
     if (sessionSelector.classList.contains('hidden')) {
       showSessionPlanAndButton();
@@ -195,8 +195,8 @@ function createForm() {
   }
 
   function sessionSelected() {
-    disablePastSessions(storedData[dateSelector.value][sessionSelector.value].date);
-    showAvailablityOfSeats();
+      showAvailablityOfSeats();
+      disablePastSessions(storedData[dateSelector.value][sessionSelector.value].date);
   }
 
   function createSessionOption(item, i) {
