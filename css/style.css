@@ -55,8 +55,7 @@ h1 {
 /*Oprava dekorace textu zkratky u některých prohlížečů*/
 abbr[title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*------------------KONEC------------------CORE.CSS------------------KONEC------------------*/
@@ -74,7 +73,6 @@ abbr[title] {
 }
 
 .row {
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -85,12 +83,9 @@ abbr[title] {
 .seat {
   padding: .1rem;
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .seat .circle {
@@ -126,7 +121,6 @@ abbr[title] {
 }
 
 .seat-group {
-  display: -ms-flexbox;
   display: flex;
   margin: 0 1rem;
 }
@@ -147,12 +141,9 @@ abbr[title] {
 }
 
 .selects-wrapper {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
@@ -194,22 +185,16 @@ abbr[title] {
 }
 
 .main-content-wrapper {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-header {
   color: white;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
 }
 
 .main-header h1 {
@@ -217,10 +202,8 @@ abbr[title] {
 }
 
 .booking-form {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
 }
 
 .submit-button {
@@ -228,8 +211,7 @@ abbr[title] {
   background: #2F243A;
   padding: 1rem;
   border: 1px solid #444054;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   transition: transform 500ms ease 1s, opacity 500ms ease 1s;
   color: #BEBBBB;
   margin-top: 1rem;
@@ -241,12 +223,9 @@ abbr[title] {
 }
 
 .booking-message-wrapper {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -270,7 +249,6 @@ abbr[title] {
 
 .close-message {
   position: absolute;
-  display: -ms-flexbox;
   display: flex;
   right: 0;
   padding: 0 1rem;
@@ -286,10 +264,8 @@ abbr[title] {
   }
   .seat {
     position: relative;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-        align-items: center;
+    align-items: center;
     width: 2rem;
     height: 2rem;
   }
@@ -312,12 +288,9 @@ abbr[title] {
   }
   .seat-number {
     position: absolute;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -327,10 +300,8 @@ abbr[title] {
     left: 0;
   }
   .close-message {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-        align-items: center;
+    align-items: center;
     top: 0;
     height: 100%;
   }
@@ -358,3 +329,4 @@ body {
   font-family: 'Rubik', sans-serif;
   margin: 0 .5rem;
 }
+/*# sourceMappingURL=style.css.map */
