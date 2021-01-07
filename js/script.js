@@ -151,8 +151,8 @@ function createForm(){    //Vytvoří seznam dat podle local storage
     
     function dateSelected(){    //Pokud je zavolána (např. event listenerem), proveduje následující:
         appendSessionOptions();
-        disablePastSessions(storedData[dateSelector.value][sessionSelector.value].date);
         showAvailablityOfSeats();
+        disablePastSessions(storedData[dateSelector.value][sessionSelector.value].date);
         if(sessionSelector.classList.contains('hidden')){
             showSessionPlanAndButton();
         }
@@ -205,19 +205,19 @@ function createForm(){    //Vytvoří seznam dat podle local storage
     }
 
     function disablePastSessions(checkedDate){    //Zabrání, aby bylo možné vybrat sedadla v minulosti
-        const allSeats = document.querySelectorAll('.seat');
         if(isDateInPast(checkedDate)){
-            allSeats.forEach(function(seat){
-                seat.classList.add('disabled');
-                seat.querySelector('.seat-checkbox').disabled = true;
-                seat.title = "Toto promítání již proběhlo";
+            seatCheckboxes.forEach(function(seatCheckbox){
+                seatCheckbox.disabled = true;
+                seatCheckbox.parentElement.classList.add('disabled');
+                seatCheckbox.parentElement.title = "Toto promítání již proběhlo";
+                console.log(seatCheckbox.disabled)
             });
         }
         else{
-            allSeats.forEach(function(seat){
-                seat.classList.remove('disabled');
-                seat.querySelector('.seat-checkbox').disabled = false;
-                seat.title = '';
+            seatCheckboxes.forEach(function(seatCheckbox){
+                seatCheckbox.disabled = false;
+                seatCheckbox.parentElement.classList.remove('disabled');
+                seatCheckbox.parentElement.title = '';
             });
         }
     }
